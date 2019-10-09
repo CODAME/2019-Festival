@@ -161,11 +161,26 @@ header {
     &.register {
       //   border-color:magenta;
     }
+
+
     &:hover {
-      transition: all 0.2s ease-in;
-      text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
-        #424041 0px 0px 20px, #ff2d95 0px 0px 30px, #009688 0px 0px 40px,
-        #009688 0px 0px 50px, #009688 0px 0px 75px;
+      @keyframes change-glow {
+        from {
+          text-shadow: none;
+        }
+      
+        to {
+          text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
+          #424041 0px 0px 20px, #ff2d95 0px 0px 30px, #009688 0px 0px 40px,
+          #009688 0px 0px 50px, #009688 0px 0px 75px;
+        }
+      }
+  
+
+      animation-duration: 0.07s;
+      animation-name: change-glow;
+      animation-iteration-count: infinite;
+      animation-direction: alternate;      
     }
   }
 }
@@ -984,4 +999,15 @@ ul {
     font-size: 14px;
     line-height: 1.3em;
   }
+}
+
+#performances, #installations {
+  // shifting up so the
+  // h2 don't get hidden under header
+  position: absolute;
+  margin-top: -50px;
+}
+
+.external-icon {
+  height: 13px;
 }
