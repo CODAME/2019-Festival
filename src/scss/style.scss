@@ -165,18 +165,24 @@ header {
 
     &:hover {
       @keyframes change-glow {
-        from {
+        0% {
           text-shadow: none;
         }
-      
-        to {
-          text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
+        30% {
+          text-shadow: #fff 0px 0px 1px,
+         #ff2d95 0px 0px 30px, #009688 0px 0px 40px,
+          #009688 0px 0px 50px;
+        }
+        70%{
+          text-shadow: #fff 0px 0px 4px,
+          #424041 0px 0px 20px;
+        }
+        100% {
+          text-shadow: #fff 0px 0px .1px, #fff 0px 0px .3px, #fff 0px 0px .4px,
           #424041 0px 0px 20px, #ff2d95 0px 0px 30px, #009688 0px 0px 40px,
           #009688 0px 0px 50px, #009688 0px 0px 75px;
         }
       }
-  
-
       animation-duration: 0.07s;
       animation-name: change-glow;
       animation-iteration-count: infinite;
